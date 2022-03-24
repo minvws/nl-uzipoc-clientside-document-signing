@@ -1,0 +1,10 @@
+.idea
+node_modules
+dist
+.parcel-cache
+.DS_Store
+*.pem
+*.crt
+*.db
+*.p12
+pkcs11.txt

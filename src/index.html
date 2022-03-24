@@ -1,0 +1,50 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Js ACME client</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script type="module" src="app.js"></script>
+    </head>
+    <body>
+        <div class="content">
+            <div class="wrapper">
+                <div>
+                    <label for="jwt-token">JWT token:</label>
+                    <textarea class="jwt-area" id="jwt-token">eyJhbGciOiJSUzI1NiIsIng1dCI6Ik16Wm1NbVJrTlRrM05ETXhOV1ZqWWpnME9UaGxPR0kxTkdGaVpqVXpNR1JtTnpFeFltWTNNQT09In0.eyJnaXZlbk5hbWUiOiJnaXZlbk5hbWUiLCJyb2xlQ29kZXMiOlsiMTIzNCJdLCJzdXJOYW1lIjoic3VyTmFtZSIsInVyYU51bWJlciI6InNvbWVfdXJhX251bWJlciIsInV6aU51bWJlciI6IjEyMzQifQ.X392tooFOTjXf-N3GOn7j446HG8HleWsw_MGJSE2p0KSIP6ovY2j4UUx0Vhz-wP18YDcegOy8y5Z5_Qgqq6G8Ln8M-6Udm0DFBldVnpOs30UYyo_LWny_TP83TmiHf0B1z_nA7aCt0S2K6mQaZX-CR6PQaunrGWDbOOdcoMf9CtvMHhFcpkgzx7nOxD2TERAM-GOlVC0BA4chtkonufNBKhwRnUJdgTuIHyaZgtNzua_8wGtyOPBfLHtLy7baCcdB4RWKWY1LK7KdXj7HJ-e5iwwIustiPYHdOjSNSIu_QlMf5aZXpOoVf2VY4SmCgy_UXAGTAku5iYfdDV0Fdz95Q</textarea>
+                </div>
+                <div>
+                    <label for="service-dropdown">Certificate service:</label>
+                    <select id="service-dropdown">
+                        <option disabled selected value>select</option>
+                        <option value="Browser">browser</option>
+                        <option value="HSM">Signing HSM service</option>
+                    </select>
+                </div>
+                <div>
+                    <p>
+                        <label for="csr-textarea">csr:</label>
+                        <textarea class="certificate-area" id="csr-textarea"></textarea>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <label for="certificate-textarea">certificate:</label>
+                        <textarea class="certificate-area" id="certificate-textarea"></textarea>
+                    </p>
+                </div>
+                <div>
+                    <input type="file" id="sign-pdf-input" disabled>
+                </div>
+                <div>
+                    <p>
+                        <label for="cms-textarea">cms:</label>
+                        <textarea class="certificate-area" id="cms-textarea"></textarea>
+                    </p>
+                </div>
+                <div>
+                    <a id="sign-pdf-output">download</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
