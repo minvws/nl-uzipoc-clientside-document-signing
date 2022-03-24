@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@git.techlutions.nl:techlutions/minvws/js-acme-client.git"
+    "url": "git@github.com:techlutions/minvws/nl-uzipoc-clientside-document-signing.git"
   },
   "author": "Gerbrand Bosch",
   "license": "ISC",
