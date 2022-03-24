@@ -1,0 +1,27 @@
+{
+  "name": "js-acme-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx parcel src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.techlutions.nl:techlutions/minvws/js-acme-client.git"
+  },
+  "author": "Gerbrand Bosch",
+  "license": "ISC",
+  "dependencies": {
+    "asn1js": "^2.1.1",
+    "jose": "^4.3.9",
+    "node-forge": "^0.10.0",
+    "node-signpdf": "^1.4.1",
+    "pkijs": "^2.2.2",
+    "pvutils": "^1.0.17"
+  },
+  "devDependencies": {
+    "parcel": "^2.2.1"
+  }
+}
