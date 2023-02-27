@@ -15,7 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "asn1js": "^2.1.1",
-    "jose": "^4.3.9",
+    "jose": "^4.13.0",
     "node-forge": "^0.10.0",
     "node-signpdf": "^1.4.1",
     "pkijs": "^2.2.2",
