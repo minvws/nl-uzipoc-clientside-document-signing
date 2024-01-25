@@ -5,13 +5,13 @@ This is a demo application to show the signing process of a pdf document
  Please note that this repository is used as a proof of concept only, and it is not meant
  to be used in a production setup.
 
- Install the application dependencies with:
+ Install the application dependencies using the following command:
 
  ```Shell
  npm install
  ```
 
-Run this application with `npm start`:
+Run this application using the following command:
 ```Shell
 npm start
 ```
