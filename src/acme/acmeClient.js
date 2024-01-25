@@ -1,5 +1,4 @@
 import {serializePayload, base64UrlEncodeObject} from "../helpers/base64UrlEncoder";
-import {arrayBufferToBase64} from "../helpers/bufferHelper";
 import {Buffer} from "buffer";
 
 export default class AcmeClient {
@@ -61,7 +60,6 @@ export default class AcmeClient {
         };
         const payload = {
             "identifiers": [
-                // {"type": "dns", "value": requestedDomain}
                 {"type": "jwt", "value": requestedDomain}
             ]
         };

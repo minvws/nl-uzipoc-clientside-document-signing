@@ -12,20 +12,11 @@ const browserSideCertificateService = new BrowserSideCertificateService();
 const saasService = new SaasService();
 const fileService = new FileService();
 let certificate;
-// const jwt = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2VVpJIjoiNDI0MjQyNDIifQ.3Np6VqNR_D5AIMKqSD9NQSiu9SimiTdNx7OrwdhNfRQ";
 
 const fetchAcmeCertificate = async function(event){
     let jwt = document.querySelector('#jwt-token').value
-    // let domain = JSON.parse(window.atob(jwt.split('.')[1]));
     const domain = "900020108"
-    // if(domain['uziNumber'] !== undefined){
-    //     domain = domain['uziNumber'];
-    // } else {
-    //     domain = domain['vUZI'];
-    // }
-    // console.log(typeof domain);
-    // let domain = "900020108"
-    console.log(domain);
+
     if(document.getElementById('service-dropdown').value === "Browser") {
         const csr = await browserSideCertificateService.createCsr(domain);
         const pubKey = await browserSideCertificateService.exportPublicKey()
@@ -37,7 +28,7 @@ const fetchAcmeCertificate = async function(event){
             pubKey);
         document.querySelector('#certificate-textarea')
             .value = certificate;
-    }else{
+    } else {
         const csr = await saasService.createCsr(jwt);
         document.querySelector('#csr-textarea').value = csr;
         certificate = await acmeService.fetchAcmeCertificate(
