@@ -24,7 +24,6 @@ export default class SaasService {
         return await new Promise((resolve, reject) => {
             hash = arrayBufferToBase64(hash);
             console.log(hash);
-            // const hex = buf2hex(hash);
 
             const xhr = new XMLHttpRequest();
             xhr.open("POST",  "http://localhost:8002/sign", true);
@@ -34,7 +33,7 @@ export default class SaasService {
                 let pemCsr = window.atob(JSON.parse(this.responseText).cms);
                 resolve(pemCsr);
             }
-            // console.log(certificate);
+            
             xhr.send('{"algorithm": "sha256", "cert": "' + window.btoa(certificate) + '", "hash": "' + hash + '", "timestamp": true }');
         });
     }

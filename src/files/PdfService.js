@@ -1,8 +1,6 @@
 import plainAddPlaceholder from '../node-signpdf/helpers/plainAddPlaceholder';
 import {findByteRange, removeTrailingNewLine} from "../node-signpdf/helpers";
 import SignPdfError from "../node-signpdf/SignPdfError";
-import fs from "fs";
-import {arrayBufferToBase64} from "../helpers/bufferHelper";
 
 export default class PdfService{
     async determineHash(pdfBuffer){
@@ -43,6 +41,7 @@ export default class PdfService{
             );
         }
         const byteRangePos = pdf.indexOf(byteRangePlaceholder);
+        
         // Calculate the actual ByteRange that needs to replace the placeholder.
         const byteRangeEnd = byteRangePos + byteRangePlaceholder.length;
         const contentsTagPos = pdf.indexOf('/Contents ', byteRangeEnd);
@@ -56,6 +55,7 @@ export default class PdfService{
         byteRange[3] = pdf.length - byteRange[2];
         let actualByteRange = `/ByteRange [${byteRange.join(' ')}]`;
         actualByteRange += ' '.repeat(byteRangePlaceholder.length - actualByteRange.length);
+        
         // Replace the /ByteRange placeholder with the actual ByteRange
         pdf = Buffer.concat([
             pdf.slice(0, byteRangePos),

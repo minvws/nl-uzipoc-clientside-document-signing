@@ -28,7 +28,6 @@ const extractSignature = (pdf, signatureCount = 1) => {
         );
     }
 
-    // const byteRangePos = pdf.indexOf('/ByteRange [');
     const byteRangePos = getSubstringIndex(pdf, '/ByteRange [', signatureCount);
     if (byteRangePos === -1) {
         throw new SignPdfError(

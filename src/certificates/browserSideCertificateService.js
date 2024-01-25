@@ -139,7 +139,6 @@ export default class BrowserSideCertificateService {
             resultString += formatPEM(base64UrlEncode(pkcs10.toSchema().toBER(false)));
             resultString += `\r\n-----END CERTIFICATE REQUEST-----`;
             return resultString;
-            // return base64UrlEncode(pkcs10.toSchema().toBER(false));
         }, error => Promise.reject(`Error signing PKCS#10: ${error}`));
     }
 
